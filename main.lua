@@ -3,7 +3,7 @@ local res_div = 8
 
 local color_divider = 0.15
 local use_palet = true
-local palet_name = "paletI.png"
+local palet_name = "paletJ.png"
 
 local scl_x, scl_y = 0, 0
 local pixelArt

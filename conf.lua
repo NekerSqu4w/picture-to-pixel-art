@@ -1,7 +1,7 @@
 function love.conf(t)
 	t.version = "11.3"
 
-	t.console = true
+	t.console = false
 	t.identity = ".ppa"
 
 	t.window.resizable = false

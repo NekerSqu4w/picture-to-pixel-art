@@ -1,7 +1,7 @@
 local ScrX, ScrY = love.graphics.getDimensions()
-local res_div = 8
+local res_div = 6
 
-local color_divider = 0.15
+local color_divider = 0.0001
 local use_palet = true
 local palet_name = "paletJ.png"
 
@@ -62,7 +62,7 @@ end
 
 function love.filedropped(f)
 	local n = f:getFilename():lower()
-	if n:find("%.png$") or n:find("%.jpeg$") or n:find("%.jpg$") or n:find("%.jfif$") then
+	if n:find("%.png$") or n:find("%.jpeg$") or n:find("%.jpg$") then
 		convert(f)
 		rendering = true
 	end
@@ -75,7 +75,7 @@ function love.load()
 	local palet_data = love.image.newImageData(palet_convert:getWidth(),palet_convert:getHeight())
 	for x=0, palet_convert:getWidth()-1 do
 		r,g,b,a = palet_convert:getPixel(x,0)
-		palet_color[#palet_color+1] = {r=r,g=g,b=b}
+		palet_color[#palet_color+1] = {r=r,g=g,b=b,a=a}
 	end
 
 	convert('ahah.png')

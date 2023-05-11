@@ -1,12 +1,12 @@
 function love.conf(t)
 	t.version = "11.3"
 
-	t.console = false
+	t.console = true
 	t.identity = ".ppa"
 
-	t.window.resizable = false
+	t.window.resizable = true
 	t.window.vsync = true
 
-	t.window.minwidth = 800
-	t.window.minheight = 800
+	t.window.width = 1600
+	t.window.height = 900
 end
